@@ -1,8 +1,14 @@
+import {FC} from "react";
 import Head from 'next/head'
 import Navbar from "../Navbar"
 import styles from "./LayoutMain.module.css"
 
-const LayoutMain = ({children}) => {
+// Actualizacion para React 18 del FC
+interface Props {
+	children?: React.ReactNode | undefined;
+}
+
+const LayoutMain: FC<Props> = ({children}) => {
   return (
     <div className={styles.container}>
       <Head>

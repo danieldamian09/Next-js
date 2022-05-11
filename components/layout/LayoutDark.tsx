@@ -1,6 +1,11 @@
-import React from "react";
+import {FC} from "react";
 
-const LayoutDark = ({children}) => {
+// Actualizacion para React 18 del FC
+interface Props {
+	children?: React.ReactNode | undefined;
+}
+
+const LayoutDark: FC<Props> = ({children}) => {
 	return (
 		<div
 			style={{
